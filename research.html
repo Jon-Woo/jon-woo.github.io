@@ -1,0 +1,56 @@
+---
+layout: default
+title: Jonathan Woo
+---
+<div id="container">
+    <p>
+    On this page, you can find my research publications and presentations.
+    Below that, I have included descriptions of projects I have worked on.
+    If you are interested in collaboration or have questions about the projects, please contact me.
+    </p>
+</div>
+
+<hr>
+
+<div id="container">
+    <h3>Publications (Reverse Chronological Order)</h3>
+    <ol>
+        {% for paper in site.data.research.papers%}
+            <li>
+                {{paper.authors}},
+                {{paper.title}},
+                {{paper.journal}},
+                {{paper.volume}},
+                {{paper.year}},
+                {{paper.pages}},
+                {{paper.ISSN}},
+                <a href="{{paper.doi}}">{{paper.doi}}</a>.
+                
+                {{paper.notes}}
+            </li>
+        {% endfor %}
+   
+    </ol>
+
+    <h3>Presentataions (Reverse Chronological Order)</h3>
+    <ol>
+        {%for presentation in site.data.research.presentations%}
+            <li>
+                {{presentation.authors}},
+                {{presentation.title}},
+                {{presentation.conference}},
+                {{presentation.year}}{%if presentation.doi != "empty" %}, <a href="{{presentation.doi}}">{{presentation.doi}}</a>{%endif%}.
+                {{presentation.notes}}
+            </li>
+        {%endfor%}
+
+    </ol>
+</div>
+<hr>
+<div id="container">
+    <h3>Projects</h3>
+    {%for project in site.data.research.projects%}
+        <h4>{{project.name}}</h4>
+        {%include {{project.include}} %}
+    {%endfor%}
+</div>
