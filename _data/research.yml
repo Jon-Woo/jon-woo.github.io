@@ -1,0 +1,34 @@
+papers:
+  - authors: "Wing Pok Lee*, Jonathan D. Woo*, Luke F. Triplett*, Yifan Gu*, Sarah C. Burnett, Lingyun Ding, Andrea L. Bertozzi"
+    title: "A comparative study of dynamic models for gravity-driven particle-laden flows"
+    journal: "Applied Mathematics Letters"
+    volume: "Volume 164"
+    year: "2025"
+    pages: "109480"
+    ISSN: "ISSN 0893-9659"
+    doi: https://doi.org/10.1016/j.aml.2025.109480
+    notes: "(*equal contribution)"
+
+presentations:
+  - authors: "Jonathan Woo*, Yifan Gu*, Wing Pok Lee*"
+    title: "Gravity-driven Particle-laden Free Surface Flow - A comparison of models"
+    conference: "UCLA Undergraduate Research and Creativity Showcase"
+    year: "2024"
+    doi: "empty"
+    notes: "(*equal contribution)"
+  - authors: "Jonathan Woo*, Wing Pok Lee*, Luke Triplett*, Yifan Gu*, Sarah C. Burnett, Lingyun Ding, Andrea L. Bertozzi"
+    title: "Phase transitions in highly concentrated particle-liquid thin films"
+    conference: "American Phyiscal Society 76th Annual Meeting of the Division of Fluid Dynamics"
+    year: "2023"
+    doi: "https://meetings.aps.org/Meeting/DFD23/Session/S01.54"
+    notes: "(*equal contribution)"
+  - authors: "Luke Triplett*, Yifan Gu*, Jonathan Woo*, Wing Pok Lee*, Sarah C. Burnett, Lingyun Ding, Andrea L. Bertozzi"
+    title: "Modeling polydisperse particle-laden flow down an incline"
+    conference: "American Phyiscal Society 76th Annual Meeting of the Division of Fluid Dynamics"
+    year: "2023"
+    doi: "https://meetings.aps.org/Meeting/DFD23/Session/S01.15"
+    notes: "(*equal contribution)"
+
+projects:
+  - name: Particle-Laden Flows
+    include: lorem-ipsum.html

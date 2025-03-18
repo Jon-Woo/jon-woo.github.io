@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: Notes
+  link: /notes.html
+- name: Research
+  link: /research.html
+- name: Teaching
+  link: /teaching.html
+- name: Social Media
+  link: /social-media.html
