@@ -3,4 +3,10 @@ layout: default
 title: Jonathan Woo
 ---
 
-{%assign updates = site.static_files | where: "path", %}
+{%assign updates = site.static_files | where: "update-log", "true" %}
+<ol>
+{%for update in updates%}
+  <li>{%include_relative {{update.path}} %}</li>
+{%end}
+</ol>
+
