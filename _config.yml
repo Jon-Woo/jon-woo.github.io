@@ -49,7 +49,7 @@ defaults:
     values:
       pinned: false
   - scope:
-      path: "assets/updates"
+      path: "assets/announcements/updates"
     values:
       update-log: true
 
