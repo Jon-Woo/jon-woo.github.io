@@ -32,6 +32,26 @@ theme: minima
 plugins:
   - jekyll-feed
 
+
+
+#Static files
+defaults:
+  - scope:
+      path: "assets/announcements"
+    values:
+      announcement: true
+  - scope:
+      path: "assets/announcements/pinned"
+    values:
+      pinned: true
+  - scope:
+      path: "assets/announcements/unpinned"
+    values:
+      pinned: false
+
+
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

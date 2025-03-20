@@ -15,13 +15,27 @@ title: Jonathan Woo
 </div>
 <hr>
 <div id="container">
-    <h3>Announcements and News (updated February 2025)</h3>
+    
+    <h3>Announcements and News</h3>
+    {% assign announcements = site.static_files | where: "announcement", true%}
+    {% assign pinned_announcements = announcements | where: "pinned", true%}
+    {% assign unpinned_announcements = announcements | where: "pinned", false |sort: "modified_time" | reverse%}
+    {% if pinned_announcements.size >0%}
     <ul>
-        <li>
-            For my students: go to the <a href="/teaching.html">Teaching page</a> for class resources and study materials. Please email me if there
-            are any issues with any of the materials.
-        </li>
+        {%for announcement in pinned_announcements%}
+            <li>{%include_relative {{announcement.path}}%}</li>
+        {%endfor%}        
     </ul>
+    {%endif%}
+    {% if unpinned_announcements.size >0%}
+    <hr>
+    <ul>
+        {%for announcement in unpinned_announcements%}
+            <li >({{announcement.modified_time |date_to_string}}) {%include_relative {{announcement.path}}%}</li>
+        {%endfor%}        
+        
+    </ul>
+    {%endif%}
 </div>
 <hr>
 <div id="container">    
