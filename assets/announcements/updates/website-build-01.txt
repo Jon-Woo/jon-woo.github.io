@@ -1,0 +1,3 @@
+Automated announcements and news on home page. 
+
+To do: cv and notes pages
