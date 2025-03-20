@@ -48,7 +48,10 @@ defaults:
       path: "assets/announcements/unpinned"
     values:
       pinned: false
-
+  - scope:
+      path: "assets/updates"
+    values:
+      update-log: true
 
 
 
