@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Jonathan Woo
 ---
 {%highlight python%}
 def hello:
@@ -11,7 +10,8 @@ def hello:
 {%endfor%}
 <hr>
 
-{% assign pinned_announcements = site.static_files | where: "pinned", true %}
+{% assign pinned_announcements = site.static_files | where: "pinned", false %}
 {% for announcement in pinned_announcements%}
     {%include_relative {{announcement.path}}%}
 {%endfor%}
+

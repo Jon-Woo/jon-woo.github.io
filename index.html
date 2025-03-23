@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Jonathan Woo
 ---
 <div id="container">
     <p>
@@ -31,7 +30,7 @@ title: Jonathan Woo
     <hr>
     <ul>
         {%for announcement in unpinned_announcements%}
-            <li >({{announcement.modified_time |date_to_string}}) {%include_relative {{announcement.path}}%}</li>
+            <li><span style="color:rgb(126, 124, 124)">({{announcement.modified_time |date_to_string}})</span> {%include_relative {{announcement.path}}%}</li>
         {%endfor%}        
         
     </ul>

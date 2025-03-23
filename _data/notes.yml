@@ -1,16 +1,8 @@
 - name: Mathematics
   subjects:
-    - name: Linear Algebra
-      link: /
     - name: Real Analysis
-      link: /
-    - name: Complex Analysis
-      link: /
-    - name: Numerical Analysis
-      link: /
-    - name: Differential Equations
-      link: /
-- name: Programming
+      link: /notes/mathematics/real-analysis/real-analysis.html
+- name: Computer Science
   subjects:
 - name: Engineering
   subjects:

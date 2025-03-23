@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Jonathan Woo
 ---
 <div id="container">
     <p>
@@ -22,7 +21,7 @@ title: Jonathan Woo
         <h3>{{item.name}}</h3>
         <ul>
             {%for subject in item.subjects%}
-                <li><a href="{{subject.link}}">{{subject.name}}</a></li>
+                <li><a href="{{subject.link}}" target="_blank">{{subject.name}}</a></li>
             {%endfor%}
         </ul>
     {% endfor %}
