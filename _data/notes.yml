@@ -1,7 +1,6 @@
 - name: Mathematics
   subjects:
     - name: Real Analysis
-      link: /notes/mathematics/real-analysis/real-analysis.html
 - name: Computer Science
   subjects:
 - name: Engineering
