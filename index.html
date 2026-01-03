@@ -5,43 +5,44 @@ layout: default
     <p>
         Welcome to the personal website of Jonathan Woo! 
         Here you can find my personal notes, research (projects, papers, and presentations),
-        student and teaching resources, and links to my professional social media accounts.
-    </p>
-    <p>
-        CV:<br>
-        E-mail: jonwoo [at] math [dot] ucla [dot] edu
+        teaching and tutoring resources, and links to my professional social media accounts.
     </p>
 </div>
-<hr>
+<!-- <hr> -->
 <div id="container">
     
-    <h3>Announcements and News</h3>
-    {% assign announcements = site.static_files | where: "announcement", true%}
-    {% assign pinned_announcements = announcements | where: "pinned", true%}
-    {% assign unpinned_announcements = announcements | where: "pinned", false |sort: "modified_time" | reverse%}
-    {% if pinned_announcements.size >0%}
+    <h3>Announcements</h3>
     <ul>
-        {%for announcement in pinned_announcements%}
-            <li>{%include_relative {{announcement.path}}%}</li>
-        {%endfor%}        
+        {%for announcement in site.categories.pinned%}
+            <li>{{announcement.content | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+        {%endfor%}
     </ul>
-    {%endif%}
-    {% if unpinned_announcements.size >0%}
-    <hr>
+    <h3>News</h3>
     <ul>
-        {%for announcement in unpinned_announcements%}
-            <li><span style="color:rgb(126, 124, 124)">({{announcement.modified_time |date_to_string}})</span> {%include_relative {{announcement.path}}%}</li>
-        {%endfor%}        
-        
+        {%for announcement in site.categories.unpinned%}
+            <li><span style="color:rgb(126, 124, 124)">({{announcement.date |date_to_string}})</span> {{announcement.content | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+        {%endfor%}
     </ul>
-    {%endif%}
+    
+    
 </div>
-<hr>
+<!-- <hr> -->
 <div id="container">    
     <h3>About Me</h3>
+    <div>
+    <!--<img src="{{site.data.images.headshot.link}}" id="headshot">-->
     <p>
-        I am a Ph.D. student at UCLA studying applied mathematics. 
-        I am also very passionate about teaching and tutoring students in science and math (see the <a href="/teaching.html">Teaching page</a> to learn more).
+        I am a Ph.D. student at UCLA studying mathematics. For undergrad, I also studied math at UCLA.
+        As an undergraduate student, I was interested in differential equations and numerical analysis with applications in fluid dynamics. 
+        I am still exploring my interests as a graduate student.
+    
     </p>
+    <p>
+        I am also very passionate about teaching science and math. 
+        I have experience teaching and tutoring elementary, middle, and high school math as well as college level math as a teaching assistant.
+        I am open to tutoring UCLA students (see <a href="/teaching.html">Teaching page</a>).
+    </p>
+    </div>
+    
 </div>
 

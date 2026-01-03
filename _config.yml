@@ -32,9 +32,10 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Permalink
+permalink: /:categories/:title
 
-
-#Static files
+# Static files
 defaults:
   - scope:
       path: "assets/announcements"
@@ -52,6 +53,10 @@ defaults:
       path: "assets/announcements/updates"
     values:
       update-log: true
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
 
 
 

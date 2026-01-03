@@ -1,5 +1,6 @@
 ---
-layout: default
-title: Jonathan Woo
+layout: post
+title: "Sample math blog post"
+author: Jonathan Woo
 ---
-Let $x\in \mathbb{R}$
+Let $x\in \mathbb{R}$.

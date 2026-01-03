@@ -1,0 +1,43 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}, {{page.term}}</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <script>
+            MathJax ={
+                tex: {
+                    inlineMath: [['$','$']]
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    </head>
+    <body>
+        <main>
+            <div id="banner">
+                <h2>{{page.title}}, {{page.term}}</h1>
+                <h4>Teaching Assistant: {{ page.author }}</h4>
+                <h4>Email: {{site.data.footer.email}}</h4>
+                <h4>Office Hours: {{page.office-hours}}</h4>
+
+            </div>
+            
+            <div id="container">
+                {{ content }}
+            </div>
+            {%if page.evals %}
+            <div id="container">
+                <h3>Teaching Evaluations:</h3>
+                <ul>
+                    <li><a href="{{page.evaluation-mid}}" target="_blank"><b>Mid-term Evaluations</b></a></li><br>
+                    <li><a href="{{page.evaluation-end}}" target="_blank"><b>End-of-term Evaluations</b></a></li>
+                </ul>
+            </div>
+            {%endif%}
+        </main>
+    </body>
+</html>

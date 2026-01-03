@@ -3,8 +3,7 @@ layout: default
 ---
 <div id="container">
     <p>
-        Mostly for my own reference but also for others, I have uploaded a collection of
-        my notes compiled from textbooks, lectures, and online courses.
+        On this page, you can find some of my notes.
     </p>
 
     <!--<p>
@@ -15,14 +14,42 @@ layout: default
     -->
 </div>
 
-<hr>
-<div id="container">
-    {% for item in site.data.notes %}
+<!-- <hr> -->
+ <div id="container">
+    <h3>Mathematics</h3>
+    <ul>
+        {%for subject in site.categories.mathematics %}
+            <li><a href="{{subject.url}}" target="_blank">{{subject.title}}</a></li>
+        {% endfor%}
+    </ul>
+    
+ </div>
+ <div id="container">
+    <h3>Engineering</h3>
+    <ul>
+        {%for subject in site.categories.engineering %}
+            <li><a href="{{subject.url}}" target="_blank">{{subject.title}}</a></li>
+        {% endfor%}
+    </ul>
+    
+ </div>
+ <div id="container">
+    <h3>Computer Science</h3>
+    <ul>
+        {%for subject in site.categories.computer-science %}
+            <li><a href="{{subject.url}}" target="_blank">{{subject.title}}</a></li>
+        {% endfor%}
+    </ul>
+    
+ </div>
+
+
+<!-- <div id="container">
+    
         <h3>{{item.name}}</h3>
         <ul>
             {%for subject in item.subjects%}
                 <li><a href="{{subject.link}}" target="_blank">{{subject.name}}</a></li>
             {%endfor%}
         </ul>
-    {% endfor %}
-</div>
+</div> -->

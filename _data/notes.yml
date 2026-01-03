@@ -1,8 +1,7 @@
 - name: Mathematics
-  subjects:
-    - name: Real Analysis
+  category: site.categories.mathematics
 - name: Computer Science
-  subjects:
+  category: 
 - name: Engineering
-  subjects:
+  category:
 

@@ -1,7 +1,7 @@
 - name: Home
   link: /
-- name: Notes
-  link: /notes.html
+# - name: Notes
+#   link: /notes.html
 - name: Research
   link: /research.html
 - name: Teaching

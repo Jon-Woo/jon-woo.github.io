@@ -3,20 +3,32 @@ layout: default
 ---
 <div id="container">
     <p>
-        On this page, students can find class resources including extra study materials, 
-        additional notes from discussions and office hours, and interesting problems to supplement their studies. 
+        On this page, students can find class resources including discussion notes and other information.
+         Below that, there is information about tutoring.
     </p>
 
-    <p>
+    <!--<p>
         Below that, I have included some resources for teaching and tutoring. If you would like more detailed
         information or would like to contribute something, please contact me. 
-    </p>
+    </p>-->
 </div>
 
-<hr>
+<!-- <hr> -->
 
 <div id="container">
-    <h3>Student Resources</h3>
+    <h3>Courses</h3>
+    <ul>
+        {% for post in site.categories.courses %}
+            <li><a href="{{post.url}}", target="_blank">{{post.title}}, {{post.term}}</a></li>
+        {%endfor%}
+    </ul>
+</div>
+<div id="container">
+    <h3>Tutoring</h3>
+    <p>
+        If you would like tutoring, please fill out this <a href="https://forms.gle/VbbvSXZwEgFnvgtYA" target="_blank">form</a> (you need a UCLA email to fill out the form).  
+        Having done my undergrad at UCLA, I have taken and am comfortable tutoring most of the Math courses.
+    </p>
 </div>
 <!-- <hr>
 <div id="container">

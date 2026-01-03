@@ -1,6 +1,6 @@
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: justify;
+    // text-align: justify;
     background-color: #7b8694;
     width: 80%;
     margin-left: auto;
@@ -9,7 +9,7 @@ body{
 
 header,nav {
     font-size: 1.5em;
-    word-break: keep-all;
+    word-break:keep-all;
 }
 
 header,nav, footer {
@@ -20,9 +20,14 @@ hr{
     border-color: #1065b4;
 }
 
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
 #container{
     background-color: rgba(249, 195, 47, 0.5);
-    border-radius: 0.3em;
+    border-radius: 0.5em;
     box-shadow: 0.25em 0.25em 0.25em #4a4947;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -32,6 +37,22 @@ hr{
     margin-bottom: 1em;
     hyphens: auto;
 }
+
+#banner{
+    background-color: rgba(249, 195, 47, 0.5);
+    border-radius: 0.3em;
+    box-shadow: 0.25em 0.25em 0.25em #4a4947;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    margin:auto;
+    hyphens: auto;
+}
+
 a {
     word-break: break-all;
 }
@@ -50,4 +71,25 @@ iframe {
     display: block;
     margin-left:auto;
     margin-right:auto;
+}
+
+
+#headshot{
+    height:auto;
+    width:10%;
+    border-color: #7b8694;
+    border-style:solid;
+}
+#sidebyside{
+    display: flex;
+    gap:1em;
+    margin:none;
+}
+@media screen and (max-width: 800px) {
+    #headshot{
+        display: none;
+    }
+    #sidebyside{
+        gap:0em;
+    }
 }
